@@ -55,5 +55,5 @@ jobs:
 
     - name: Push Docker image to DockerHub
       run: |
-        docker tag my-qr-app:latest <your-dockerhub-username>/my-qr-app:latest
-        docker push <your-dockerhub-username>/my-qr-app:latest
+        docker tag my-qr-app:latest ${{ secrets.DOCKER_USERNAME }}/my-qr-app:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/my-qr-app:latest
