@@ -8,7 +8,7 @@ WORKDIR /app
 ADD . /app
 
 # Set PYTHONPATH
-ENV PYTHONPATH="${PYTHONPATH}:/app"
+ENV PYTHONPATH="/app"
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
