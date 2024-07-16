@@ -14,7 +14,7 @@ ENV PYTHONPATH="${PYTHONPATH}:/app"
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Run tests before running the application
-RUN pytest tests/test.py
+RUN pytest
 
 # Define environment variable
 ENV NAME World

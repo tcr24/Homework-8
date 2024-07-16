@@ -1,7 +1,6 @@
 import os
 import pytest
 import qrcode
-from app.main import *
 
 def test_qr_code_generation():
     # Set environment variables for the test
