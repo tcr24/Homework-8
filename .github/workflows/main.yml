@@ -27,7 +27,7 @@ jobs:
     - name: Run tests
       run: |
         source venv/bin/activate
-        pytest
+        pytest tests/test_app.py
 
   build:
     needs: test
@@ -36,6 +36,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
 
     - name: Build Docker image
       run: |
@@ -53,5 +58,5 @@ jobs:
 
     - name: Push Docker image to DockerHub
       run: |
-        docker tag my-qr-app:latest tcr24/my-qr-app:latest
+        docker tag my-qr-app:latest <your-dockerhub-username>/my-qr-app:latest
         docker push <your-dockerhub-username>/my-qr-app:latest
