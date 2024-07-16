@@ -59,8 +59,8 @@ jobs:
 
     - name: Tag Docker image
       run: |
-        docker tag my-qr-app:latest ${{ secrets.DOCKER_USERNAME }}/my-qr-app:latest
+        docker tag my-qr-app:latest ${{ secrets.DOCKER_USERNAME }}/homework8:latest
 
     - name: Push Docker image to DockerHub
       run: |
-        docker push ${{ secrets.DOCKER_USERNAME }}/my-qr-app:latest
+        docker push ${{ secrets.DOCKER_USERNAME }}/homework8:latest
