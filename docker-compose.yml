@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: my-new-qr-app2
+    container_name: new-qr-generator2
+    command: python app/main.py
