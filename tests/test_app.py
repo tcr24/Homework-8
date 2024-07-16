@@ -1,6 +1,11 @@
 import os
+import sys
 import pytest
 import qrcode
+
+# Add the parent directory of 'app' to the PYTHONPATH
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from app.main import generate_qr_code
 
 def test_qr_code_generation():
