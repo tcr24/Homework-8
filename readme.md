@@ -14,4 +14,4 @@ This project generates a QR code that links to my GitHub homepage using Python a
 ### Screenshot
 
 
-![Log Screenshot](Dockerhub%20Repo%20Setup.png)
+![Log Screenshot](Dockerhub Repo Setup.png)
