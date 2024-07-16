@@ -41,7 +41,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t my-qr-app .
+        docker build -t my-new-qr-app .
 
   push:
     needs: build
@@ -59,7 +59,7 @@ jobs:
 
     - name: Tag Docker image
       run: |
-        docker tag my-qr-app:latest ${{ secrets.DOCKER_USERNAME }}/homework8:latest
+        docker tag my-new-qr-app:latest ${{ secrets.DOCKER_USERNAME }}/homework8:latest
 
     - name: Push Docker image to DockerHub
       run: |
