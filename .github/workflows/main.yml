@@ -41,11 +41,15 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t my-new-qr-app .
+          docker build -t my-new-qr-app2 .
+
+      - name: List Docker images
+        run: |
+          docker images
 
       - name: Verify Docker image
         run: |
-          if [ -z "$(docker images -q my-new-qr-app:latest)" ]; then
+          if [ -z "$(docker images -q my-new-qr-app2:latest)" ]; then
             echo "Docker image was not built successfully"
             exit 1
           fi
@@ -70,7 +74,7 @@ jobs:
 
       - name: Tag Docker image
         run: |
-          docker tag my-new-qr-app:latest ${{ secrets.DOCKER_USERNAME }}/homework8:latest
+          docker tag my-new-qr-app2:latest ${{ secrets.DOCKER_USERNAME }}/homework8:latest
 
       - name: Push Docker image to DockerHub
         run: |
